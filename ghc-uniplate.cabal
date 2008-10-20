@@ -1,0 +1,27 @@
+name:            ghc-uniplate
+version:         0.1
+license:         BSD3
+license-file:    LICENSE
+author:          Thomas Schilling
+copyright:       (c) Thomas Schilling 2008
+maintainer:      Thomas Schilling <nominolo@googlemail.com>
+homepage:        http://github.com/nominolo/ghc-uniplate
+description:     Uniplate instances for GHC datatypes.
+synopsis:        Uniplate instances for GHC datatypes.
+category:        Development
+stability:       provisional
+build-type:      Simple
+cabal-version:   >= 1.2
+-- tested-with:     GHC ==6.10.1
+-- extra-source-files: README
+
+library
+  build-depends:   base     == 4.*,
+                   uniplate == 1.2.*,
+                   ghc      >= 6.10 && < 6.12,
+                   derive   == 0.1.*
+  hs-source-dirs:  src
+--   extensions:      CPP, TypeSynonymInstances, StandaloneDeriving,
+--                    DeriveDataTypeable, ScopedTypeVariables,
+--                    RankNTypes
+  exposed-modules: GHC.Uniplate.Instances
